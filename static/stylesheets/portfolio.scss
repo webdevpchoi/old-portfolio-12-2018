@@ -61,8 +61,13 @@
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//navbar variables
+$navbar-bg-color: #284A6F;
+$navbar-color: #B7D5FF;
 
-$navbar-color: #4D678A;
+//contact variables
+$available-color: #EDDA08;
+$contact-color: #284A6F;
 
 * {
     -webkit-overflow-scrolling: touch;
@@ -237,11 +242,11 @@ html, body {
 
 //navbar
 .navbar {
-	background-color: $navbar-color;
+	background-color: $navbar-bg-color;
 	width: 100%;
 
 	.navbar-brand {
-		color: #D6DDE7;
+		color: $navbar-color;
 	}
 
 	.navbar-toggler {
@@ -251,7 +256,7 @@ html, body {
 
 //project section
 .projects {
-	background-color: #DAE0E8;
+	background-color: #F5F5F5;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: relative;
@@ -301,11 +306,18 @@ html, body {
 			text-align: center;
 		}
 	}
+
+	.download-resume {
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	} 
 }
 
 //about me section 
 .about-me {
-	background: #64A492;
+	background: url('../images/placeholder.jpg');
 
 	h1 {
 		letter-spacing: 3px;
@@ -314,7 +326,7 @@ html, body {
 	}
 
 	.about-content {
-		background-color: #fff;
+		background-color: rgba(255, 255, 255, .7);
 		border-radius: 5px;
 		max-width: 790px;
 
@@ -329,6 +341,7 @@ html, body {
 					height: 100%;
 					width: 100%;
 					border-radius: 50%;
+					box-shadow: 3px 0 15px 4px #ABABAB, 0 3px 15px 0;
 				}
 			}
 		}
@@ -343,6 +356,7 @@ html, body {
 					height: 100%;
 					width: 100%;
 					border-radius: 5px;
+					box-shadow: 3px 0 15px 4px #ABABAB, 0 3px 15px 0;					
 				}
 			}
 		}
@@ -350,9 +364,9 @@ html, body {
 
 }
 
-.resume {
-	background-color: $navbar-color;
-}
+// .resume {
+// 	background-color: $navbar-bg-color;
+// }
 
 //Animations for modal
 /* Add Animation */
@@ -378,8 +392,12 @@ html, body {
 
 //view all skills section
 .view-skills {
-	background-color: $navbar-color;
-	width: 100%;
+	// background-color: $navbar-color;
+	margin: 0 auto;
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 
 	.skills-modal {
 		display: none; /* Hidden by default */
@@ -434,13 +452,7 @@ html, body {
 	}
 }
 
-//contact variables
-$available-color: #EDDA08;
-$contact-color: #6984A4;
-$contact-footer: #284A6F;
-//#696D7D
-
-//animation for external links
+//-bganimation for external links
 @keyframes spin {
 	from{
 		transform: rotate(0deg);
@@ -451,14 +463,15 @@ $contact-footer: #284A6F;
 }
 //contact section
 .contact {
-	background-color: $contact-color;
+	background-color: #F5F5F5;
 	position: relative;
 
 	.contact-contents {
-		background: #47628B;
+		background: $contact-color;
 		padding: 2em;
 		margin: 3em;
 		border-radius: 5px;
+		box-shadow: 0 0 3px 1px #F5F5F5, 0 0 10px 1px #F5F5F5, 0 0 10px 1px #F5F5F5;
 	}
 
 	.contact-intro {
@@ -471,7 +484,7 @@ $contact-footer: #284A6F;
 		}
 
 		.available {
-			box-shadow: 0 0 3px 1px #41444F, 0 0 3px 1px #41444F, 0 0 3px 1px #41444F;
+			box-shadow: 0 0 3px 1px #41444F, 0 0 10px 1px #41444F, 0 0 10px 1px #41444F;
 			border: 2px solid $available-color;
 			color: $available-color;
 			text-transform: uppercase;
@@ -528,12 +541,13 @@ $contact-footer: #284A6F;
 }
 
 .contact-footer {
-	background-color: $contact-footer;
+	background-color: $contact-color;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: .8em;
+	position: relative;
 		
 	.up {
 		font-size: 2em;

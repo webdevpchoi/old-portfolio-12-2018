@@ -201,15 +201,15 @@ html, body {
   padding-top: 60px; }
 
 .navbar {
-  background-color: #4d678a;
+  background-color: #284a6f;
   width: 100%; }
   .navbar .navbar-brand {
-    color: #D6DDE7; }
+    color: #b7d5ff; }
   .navbar .navbar-toggler {
     border: 1px solid #D6DDE7; }
 
 .projects {
-  background-color: #DAE0E8;
+  background-color: #F5F5F5;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
@@ -241,15 +241,18 @@ html, body {
       margin: 1rem 0; }
     .projects .proj-carousel .view-code {
       text-align: center; }
+  .projects .download-resume a {
+    text-decoration: none;
+    color: black; }
 
 .about-me {
-  background: #64A492; }
+  background: url("../images/placeholder.jpg"); }
   .about-me h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
     margin: 1em; }
   .about-me .about-content {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     max-width: 790px; }
     .about-me .about-content .upper {
@@ -261,7 +264,8 @@ html, body {
         .about-me .about-content .upper .portrait-img img {
           height: 100%;
           width: 100%;
-          border-radius: 50%; }
+          border-radius: 50%;
+          box-shadow: 3px 0 15px 4px #ABABAB, 0 3px 15px 0; }
     .about-me .about-content .lower .hobby-img {
       width: 170px;
       height: 170px;
@@ -269,10 +273,8 @@ html, body {
       .about-me .about-content .lower .hobby-img img {
         height: 100%;
         width: 100%;
-        border-radius: 5px; }
-
-.resume {
-  background-color: #4d678a; }
+        border-radius: 5px;
+        box-shadow: 3px 0 15px 4px #ABABAB, 0 3px 15px 0; }
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
@@ -308,8 +310,11 @@ html, body {
     opacity: 1; } }
 
 .view-skills {
-  background-color: #4d678a;
-  width: 100%; }
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
   .view-skills .skills-modal {
     display: none;
     /* Hidden by default */
@@ -366,13 +371,14 @@ html, body {
     transform: rotate(360deg); } }
 
 .contact {
-  background-color: #6984a4;
+  background-color: #F5F5F5;
   position: relative; }
   .contact .contact-contents {
-    background: #47628B;
+    background: #284a6f;
     padding: 2em;
     margin: 3em;
-    border-radius: 5px; }
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px #F5F5F5, 0 0 10px 1px #F5F5F5, 0 0 10px 1px #F5F5F5; }
   .contact .contact-intro {
     color: #f2f2f2; }
     .contact .contact-intro h1 {
@@ -380,7 +386,7 @@ html, body {
       letter-spacing: 2px;
       margin-top: .5em !important; }
     .contact .contact-intro .available {
-      box-shadow: 0 0 3px 1px #41444F, 0 0 3px 1px #41444F, 0 0 3px 1px #41444F;
+      box-shadow: 0 0 3px 1px #41444F, 0 0 10px 1px #41444F, 0 0 10px 1px #41444F;
       border: 2px solid #edda08;
       color: #edda08;
       text-transform: uppercase; }
@@ -401,7 +407,7 @@ html, body {
         position: absolute;
         left: 7px;
         top: 2px;
-        color: #6984a4; }
+        color: #284a6f; }
       .contact .email-form .label-name .email-input, .contact .email-form .label-name .name-input, .contact .email-form .label-email .email-input, .contact .email-form .label-email .name-input {
         text-indent: 30px;
         width: 100%; }
@@ -420,7 +426,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .8em; }
+  padding: .8em;
+  position: relative; }
   .contact-footer .up {
     font-size: 2em;
     position: absolute;
@@ -430,7 +437,7 @@ html, body {
     align-items: center;
     justify-content: center; }
     .contact-footer .up .fa-circle {
-      color: #6984a4; }
+      color: #284a6f; }
   .contact-footer .external-links {
     width: 100%;
     display: flex;
