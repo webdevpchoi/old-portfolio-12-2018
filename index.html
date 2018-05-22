@@ -50,7 +50,7 @@
 	        <a class="nav-link disabled">Blog</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">About Me</a>
+	        <a class="nav-link" href="#about-me">About Me</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#contact">Contact</a>
@@ -64,7 +64,7 @@
 		<ul class="proj-carousel">
 			<li class="each-proj">
 				<div class="card">
-					<img class="card-img-top" src="https://picsum.photos/328/200/?random" alt="RGB Game Thumbnail">
+					<img class="card-img-top" src="./static/images/rgb-fullres.png" alt="RGB Game Thumbnail">
 					<div class="card-body">
 					    <h5 class="card-title text-center">RGB</h5>
 					    <h6 class="card-subtitle text-muted mb-3">Description</h6>
@@ -158,14 +158,14 @@
 				</div>
 			</li>
 		</ul>
-		<div class="options view-skills">
+		<div class="view-skills">
 			<!-- SHOW SKILLS BUTTON -->
-			<button class="show-skills btn btn-warning my-3">
+			<button class="show-skills btn btn-warning my-2">
 				<i class="fas fa-code"></i>
 				View All Skills
 			</button>
 			<!-- DOWNLOAD RESUME -->
-			<button class="download-resume btn btn-warning my-3">
+			<button class="download-resume btn btn-warning my-2">
 				<a href="./static/documents/resume.pdf" download="Phillip's Resume">
 					<i class="fas fa-file-alt"></i>
 						Download Resume					
@@ -214,8 +214,8 @@
 
 	</section>
 	<!-- ABOUT ME -->
-	<section class="about-me container-fluid d-flex align-items-center justify-content-center">
-		<div class="about-content p-4 mx-4 my-5">
+	<section id="about-me" class="about-me container-fluid d-flex align-items-center justify-content-center">
+		<div class="about-content p-3">
 			<h1 class="text-center">About Me</h1>
 			<div class="upper">
 				<div class="portrait-img">				
@@ -239,27 +239,29 @@
 	<!-- CONTACT ME -->
 	<section class="contact container-fluid d-flex justify-content-center align-items-start" id="contact">
 		<div class="contact-contents">
-			<header class="contact-intro">
-				<h1 class="text-center my-4">Let's Talk!</h1>
-				<div class="available-container text-center">
-					<div class="available btn">Available</div>
-				</div>
-				<p class="contact-desc my-4 p-2">If you're interested in hiring me for a permanent/freelance position, working together on a project together, or just have any questions regarding my portfolio or projects, please feel free to shoot me an email below! </p>
-			</header>
-			<form class="email-form form-group">
-				<label class="label-name" for="name">
-					<span><i class="fas fa-user-circle fa-2x"></i></span>
-					<input class="name-input form-control" type="text" id="name" placeholder="Name">
-				</label>
-				<label class="label-name" for="email">
-					<span><i class="fas fa-envelope-square fa-2x"></i></span>
-					<input class="email-input form-control" type="email" id='email' placeholder="Email">
-				</label>
-				<label class="label-message" for="message">
-					<textarea class="message-input form-control" name="message" id="message" placeholder="Type Message Here" cols="30" rows="10"></textarea>
-				</label>
-				<button class="submit-email btn btn-success">Submit</button>
-			</form>
+			<div class="box-shadow">
+				<header class="contact-intro">
+					<h1 class="text-center my-4">Let's Talk!</h1>
+					<div class="available-container text-center">
+						<div class="available btn">Available</div>
+					</div>
+					<p class="contact-desc my-4 p-2">If you're interested in hiring me for a permanent/freelance position, working together on a project together, or just have any questions regarding my portfolio or projects, please feel free to shoot me an email below! </p>
+				</header>
+				<form class="email-form form-group">
+					<label class="label-name" for="name">
+						<span><i class="fas fa-user-circle fa-2x"></i></span>
+						<input class="name-input form-control" type="text" id="name" placeholder="Name" required>
+					</label>
+					<label class="label-name" for="email">
+						<span><i class="fas fa-envelope-square fa-2x"></i></span>
+						<input class="email-input form-control" type="email" id='email' placeholder="Email" required>
+					</label>
+					<label class="label-message" for="message">
+						<textarea class="message-input form-control" name="message" id="message" placeholder="Type Message Here" cols="30" rows="10" required></textarea>
+					</label>
+					<button class="submit-email btn btn-success">Submit</button>
+				</form>
+			</div>
 		</div>
 	</section>
 	<!-- CONTACT FOOTER -->

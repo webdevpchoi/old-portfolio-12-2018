@@ -216,7 +216,7 @@ html, body {
   overflow: hidden; }
   .projects .proj-title {
     text-align: center;
-    margin: 1.5em;
+    margin: .8em;
     letter-spacing: 3px;
     text-transform: uppercase; }
   .projects .proj-carousel {
@@ -246,11 +246,13 @@ html, body {
     color: black; }
 
 .about-me {
-  background: url("../images/placeholder.jpg"); }
+  background: url("../images/placeholder.jpg");
+  padding: 30px 10px; }
   .about-me h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 1em; }
+    margin: .8em;
+    font-size: 2.2rem; }
   .about-me .about-content {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
@@ -311,8 +313,9 @@ html, body {
 
 .view-skills {
   margin: 0 auto;
-  width: 500px;
+  width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center; }
   .view-skills .skills-modal {
@@ -346,7 +349,7 @@ html, body {
       border: none;
       border-radius: 0;
       max-height: 406px;
-      overflow-y: scroll; }
+      overflow-y: auto; }
       .view-skills .skills-modal .modal-content .skills-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -371,14 +374,19 @@ html, body {
     transform: rotate(360deg); } }
 
 .contact {
-  background-color: #F5F5F5;
-  position: relative; }
+  background: #F5F5F5;
+  position: relative;
+  padding: 5px; }
   .contact .contact-contents {
     background: #284a6f;
-    padding: 2em;
-    margin: 3em;
+    padding: 1em;
     border-radius: 5px;
-    box-shadow: 0 0 3px 1px #F5F5F5, 0 0 10px 1px #F5F5F5, 0 0 10px 1px #F5F5F5; }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .contact .box-shadow {
+    max-width: 565px; }
   .contact .contact-intro {
     color: #f2f2f2; }
     .contact .contact-intro h1 {
@@ -461,6 +469,9 @@ html, body {
     .contact-footer .external-links .instagram:hover {
       color: #c13584; }
 
+@media (min-width: 375px) {
+  .about-me .about-content h1 {
+    font-size: 2.5rem; } }
 @media (min-width: 425px) {
   .skills-container {
     grid-template-columns: repeat(4, 1fr) !important; } }
@@ -494,6 +505,13 @@ html, body {
       width: 30%;
       max-width: 172px;
       margin: 1em; } }
+@media (min-width: 867px) {
+  .box-shadow {
+    padding: 10px;
+    background: #768AA7;
+    border-radius: 5px;
+    max-width: 565px;
+    padding: 25px; } }
 @media (min-width: 1024px) {
   .projects {
     align-items: center; }
