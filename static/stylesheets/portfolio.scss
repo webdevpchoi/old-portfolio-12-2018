@@ -62,12 +62,12 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //navbar variables
-$navbar-bg-color: #284A6F;
+$navbar-bg-color: #071C3A;
 $navbar-color: #B7D5FF;
 
 //contact variables
 $available-color: #EDDA08;
-$contact-color: #284A6F;
+$contact-color: #071C3A;
 
 * {
     -webkit-overflow-scrolling: touch;
@@ -78,6 +78,10 @@ html, body {
 	height: 100%;
 	width: 100%;
 	min-width: 300px;
+	position: relative;
+}
+
+body {
 	position: relative;
 }
 
@@ -104,13 +108,43 @@ html, body {
 	}
 }
 
+//Animations for modal
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+//-bganimation for external links
+@keyframes spin {
+	from{
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 //intro section
 .intro {
 	height: 100vh;
 	width: 100%;
 	min-height: 676px;
-	background: url('../images/trianglify.svg') no-repeat;
-	background-size: cover;
+	background: url('../images/trianglify.svg') center/cover no-repeat;
 	font-weight: 100;
 	overflow: hidden;
 
@@ -366,32 +400,6 @@ html, body {
 
 }
 
-// .resume {
-// 	background-color: $navbar-bg-color;
-// }
-
-//Animations for modal
-/* Add Animation */
-@-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
-}
-
-@keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-}
-
 //view all skills section
 .view-skills {
 	// background-color: $navbar-color;
@@ -455,34 +463,22 @@ html, body {
 	}
 }
 
-//-bganimation for external links
-@keyframes spin {
-	from{
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
 //contact section
 .contact {
-	background: #F5F5F5;
 	position: relative;
 	padding: 5px;
-
-	.contact-contents {
-		background: $contact-color;
-		padding: 1em;
-		border-radius: 5px;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// max-width: 790px;
-	}
+	background: #31476D;
+	transition: background 1s ease;
+	padding: 1em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	.box-shadow {
+		transition: background 1s ease;
 		max-width: 565px;
+		// padding: 25px;
 	}
 
 	.contact-intro {
@@ -625,6 +621,12 @@ html, body {
 	}
 }
 
+@media (min-width: 600px) {
+	.box-shadow {
+		padding: 25px;
+	}
+}
+
 @media (min-width: 768px) {
 	//intro
 	.intro {
@@ -642,8 +644,22 @@ html, body {
 			margin-top: 3em;
 		}
 	}
+	//projects
+	.projects {
+		justify-content: center !important;
+		align-items: center;
+		height: 100vh;
+		min-height: 1009px;
 
+		.proj-carousel {
+			width: 90%;
+		}
+	}
+	//about-me
 	.about-me {
+		height: 100vh;
+		min-height: 1009px;
+
 		.about-content {
 			.upper {
 				display: flex;
@@ -678,25 +694,18 @@ html, body {
 			}
 		}
 	}
-}
+	//contact me
+	.contact {
+		height: 100vh;
+		min-height: 1009px;
+		background: url('../images/trianglify.svg') center/cover no-repeat;
 
-@media (min-width: 867px) {
-	.box-shadow {
-		padding: 10px;
-		background: #768AA7;
-		border-radius: 5px;
-		max-width: 565px;
-		padding: 25px;
-		// box-shadow: 5px 0 15px 1px #D8D8D8, 0 5px 10px 1px #D8D8D8;
-	}
-}
-
-@media (min-width: 1024px) {
-	.projects {
-		align-items: center;
-
-		.proj-carousel {
-			width: 90%;
+		.box-shadow {
+			background: $contact-color;
+			border-radius: 5px;
+			max-width: 565px;
+			box-shadow: 5px 0 15px 1px #5688B0, 0 5px 10px 1px #5688B0;
 		}
 	}
+	
 }
