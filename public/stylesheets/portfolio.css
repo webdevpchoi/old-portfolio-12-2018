@@ -240,7 +240,7 @@ body {
   z-index: 1; }
 
 .sticky + .projects {
-  padding-top: 60px; }
+  padding-top: 90px; }
 
 .navbar {
   background-color: #071c3a;
@@ -493,7 +493,7 @@ body {
     justify-content: center !important;
     align-items: center;
     height: 100vh;
-    min-height: 1009px; }
+    min-height: 1060px; }
     .projects .proj-carousel {
       width: 90%; }
 

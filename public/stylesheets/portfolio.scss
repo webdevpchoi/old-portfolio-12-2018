@@ -271,7 +271,7 @@ body {
 
 //prevents sudden movement when navbar changes positions
 .sticky + .projects {
-	padding-top: 60px;
+	padding-top: 90px;
 }
 
 //navbar
@@ -650,7 +650,7 @@ body {
 		justify-content: center !important;
 		align-items: center;
 		height: 100vh;
-		min-height: 1009px;
+		min-height: 1060px;
 
 		.proj-carousel {
 			width: 90%;
