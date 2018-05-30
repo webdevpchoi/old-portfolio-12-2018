@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+console.log(process.env.NM_USER);
+console.log(process.env.NM_PASS);
+
+
 
 app.get('/', (req, res) => res.render('index'));
 
