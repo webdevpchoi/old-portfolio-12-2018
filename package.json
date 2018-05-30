@@ -5,18 +5,18 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdevpchoi/new-portfolio.git"
+    "url": "git+https://github.com/webdevpchoi/portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/webdevpchoi/new-portfolio/issues"
+    "url": "https://github.com/webdevpchoi/portfolio/issues"
   },
-  "homepage": "https://github.com/webdevpchoi/new-portfolio#readme",
+  "homepage": "https://github.com/webdevpchoi/portfolio#readme",
   "dependencies": {
     "body": "^5.1.0",
     "dotenv": "^5.0.1",
