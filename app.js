@@ -6,16 +6,13 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-
-console.log(process.env.NM_USER);
-console.log(process.env.NM_PASS);
-
 
 
 app.get('/', (req, res) => res.render('index'));
@@ -49,10 +46,12 @@ app.post('/contact-me', (req, res) => {
 	};
 
 	transporter.sendMail(mailOptions, function (err, info) {
-	   if(err)
-	     console.log(err)
-	   else
-	     console.log('mail sent!');
+	   if(err) {
+	     console.log(err);
+	   }
+	   else {	   	
+	    res.render('index');
+	   }
 	});
 
 
