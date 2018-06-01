@@ -138,21 +138,4 @@ $(document).ready(function() {
 			navBar.removeClass('sticky');
 		}
 	})
-
-	//-------------Submit email via AJAX-------------
-
-	$('.email-form').submit(function(e) {
-    	e.preventDefault();
-
-      $.ajax({
-          url: "https://formspree.io/webdevpchoi@gmail.com",
-          method: "POST",
-          data: { message: $('form').serialize() },
-          dataType: "json"
-      }).done(function(response) {
-          alert('holy balls the email was so stupid easy!');
-      });
-  });
-
-
 })
