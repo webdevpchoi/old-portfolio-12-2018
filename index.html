@@ -166,7 +166,7 @@
 			</button>
 			<!-- DOWNLOAD RESUME -->
 			<button class="download-resume btn btn-warning my-2">
-				<a href="./static/documents/resume.pdf" download="Phillip's Resume">
+				<a href="./documents/resume.pdf" download="Phillip's Resume">
 					<i class="fas fa-file-alt"></i>
 						Download Resume					
 				</a>
@@ -250,16 +250,19 @@
 				<form class="email-form form-group">
 					<label class="label-name" for="name">
 						<span><i class="fas fa-user-circle fa-2x"></i></span>
-						<input class="name-input form-control" type="text" id="name" placeholder="Name" required>
+						<input class="name-input form-control" type="text" id="name" placeholder="Name" name="name" required>
 					</label>
 					<label class="label-name" for="email">
 						<span><i class="fas fa-envelope-square fa-2x"></i></span>
-						<input class="email-input form-control" type="email" id='email' placeholder="Email" required>
+						<input class="email-input form-control" type="email" id='email' placeholder="Email" name="email" required>
+					</label>
+					<label class="label-name" for="subject">
+						<input class="subject-input form-control" type="text" id='subject' placeholder="Subject" name="subject" required>
 					</label>
 					<label class="label-message" for="message">
 						<textarea class="message-input form-control" name="message" id="message" placeholder="Type Message Here" cols="30" rows="10" required></textarea>
 					</label>
-					<button class="submit-email btn btn-success">Submit</button>
+					<button class="submit-email btn btn-success" type="submit">Submit</button>
 				</form>
 			</div>
 		</div>
