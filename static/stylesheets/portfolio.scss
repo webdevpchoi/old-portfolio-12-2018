@@ -305,6 +305,16 @@ body {
 
 	.proj-carousel {
 		padding: 0;
+		
+		.camera-container{
+			height: 100%;
+			width: 100%;
+
+			.camera {
+				height: 150px;
+				width: 150px;
+			}
+		}
 
 		.prev-proj, .next-proj {
 			font-size: 1.5em;
@@ -336,7 +346,7 @@ body {
 			margin: 1rem 0;
 		}
 
-		.view-code {
+		.view {
 			text-align: center;
 		}
 	}
