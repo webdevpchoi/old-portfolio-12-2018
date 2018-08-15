@@ -263,12 +263,24 @@ body {
     text-transform: uppercase; }
   .projects .proj-carousel {
     padding: 0; }
-    .projects .proj-carousel .camera-container {
+    .projects .proj-carousel .icon-container {
       height: 100%;
-      width: 100%; }
-      .projects .proj-carousel .camera-container .camera {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem; }
+      .projects .proj-carousel .icon-container .proj-icon {
         height: 150px;
         width: 150px; }
+    .projects .proj-carousel .view a {
+      width: 100%;
+      padding: 0; }
+      .projects .proj-carousel .view a button {
+        width: 100%; }
+    .projects .proj-carousel .card-subtitle {
+      padding: .5rem 0 .5rem 0;
+      margin-bottom: 1rem; }
     .projects .proj-carousel .prev-proj, .projects .proj-carousel .next-proj {
       font-size: 1.5em; }
     .projects .proj-carousel .prev-proj {

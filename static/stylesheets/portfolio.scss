@@ -306,14 +306,34 @@ body {
 	.proj-carousel {
 		padding: 0;
 		
-		.camera-container{
+		.icon-container {
 			height: 100%;
 			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1rem;
 
-			.camera {
+			.proj-icon {
 				height: 150px;
 				width: 150px;
 			}
+		}
+
+		.view {
+			a {
+				width: 100%;
+				padding: 0;
+				
+				button {
+					width: 100%;
+				}
+			}
+		}
+
+		.card-subtitle {
+			padding: .5rem 0 .5rem 0;
+			margin-bottom: 1rem;
 		}
 
 		.prev-proj, .next-proj {
