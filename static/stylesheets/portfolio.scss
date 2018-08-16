@@ -303,72 +303,33 @@ body {
 		text-transform: uppercase;
 	}
 
-	.proj-carousel {
-		padding: 0;
+	.row {
+		margin: 0;
 		
-		.icon-container {
+		.proj {
+			box-shadow: 0 0 8px rgba(0,0,0,.2);
+			background: rgb(255, 255, 255);
+			transition: transform .15s ease-out;
 			height: 100%;
 			width: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			margin-top: 1rem;
+			padding: 1rem;
 
 			.proj-icon {
 				height: 150px;
 				width: 150px;
 			}
 		}
+	}
 
-		.view {
-			a {
-				width: 100%;
-				padding: 0;
-				
-				button {
-					width: 100%;
-				}
-			}
-		}
 
-		.card-subtitle {
-			padding: .5rem 0 .5rem 0;
-			margin-bottom: 1rem;
-		}
-
-		.prev-proj, .next-proj {
-			font-size: 1.5em;
-		}
-
-		.prev-proj {
-			position: absolute;
-			top: 50%;
-			left: -25px;
-		}
-
-		.next-proj {
-			position: absolute;
-			top: 50%;
-			right: -25px;
-		}
-
-		.each-proj {
-			opacity: .8;
-			transform: scale(.95);
-		}
-
-		.slick-center {
-	    	opacity: 1;
-		    transform: scale(1);
-		}
-
-		.skills-used {
-			margin: 1rem 0;
-		}
-
-		.view {
-			text-align: center;
-		}
+	.proj:hover {
+		box-shadow: 0 14px 32px 0 rgba(0,0,0,.2);
+		transform: translateY(-5px);
+		cursor: pointer;
 	}
 
 	.download-resume {

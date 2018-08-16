@@ -261,46 +261,26 @@ body {
     margin: .8em;
     letter-spacing: 3px;
     text-transform: uppercase; }
-  .projects .proj-carousel {
-    padding: 0; }
-    .projects .proj-carousel .icon-container {
+  .projects .row {
+    margin: 0; }
+    .projects .row .proj {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      background: white;
+      transition: transform .15s ease-out;
       height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 1rem; }
-      .projects .proj-carousel .icon-container .proj-icon {
+      margin-top: 1rem;
+      padding: 1rem; }
+      .projects .row .proj .proj-icon {
         height: 150px;
         width: 150px; }
-    .projects .proj-carousel .view a {
-      width: 100%;
-      padding: 0; }
-      .projects .proj-carousel .view a button {
-        width: 100%; }
-    .projects .proj-carousel .card-subtitle {
-      padding: .5rem 0 .5rem 0;
-      margin-bottom: 1rem; }
-    .projects .proj-carousel .prev-proj, .projects .proj-carousel .next-proj {
-      font-size: 1.5em; }
-    .projects .proj-carousel .prev-proj {
-      position: absolute;
-      top: 50%;
-      left: -25px; }
-    .projects .proj-carousel .next-proj {
-      position: absolute;
-      top: 50%;
-      right: -25px; }
-    .projects .proj-carousel .each-proj {
-      opacity: .8;
-      transform: scale(0.95); }
-    .projects .proj-carousel .slick-center {
-      opacity: 1;
-      transform: scale(1); }
-    .projects .proj-carousel .skills-used {
-      margin: 1rem 0; }
-    .projects .proj-carousel .view {
-      text-align: center; }
+  .projects .proj:hover {
+    box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    cursor: pointer; }
   .projects .download-resume a {
     text-decoration: none;
     color: black; }

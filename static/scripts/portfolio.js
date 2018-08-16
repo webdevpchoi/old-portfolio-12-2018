@@ -8,108 +8,108 @@ $(document).ready(function() {
 	const offsetHeight = navBar.offset().top;
 
 	//slick.js settings initialized
-	carousel.slick({
-		centerPadding: '400px',
-		centerMode: true,
-		slidesToShow: 3,
-		dots: true,
-		rows: 0,
-		prevArrow: "<div class='prev-proj'><i class='fas fa-arrow-alt-circle-left prev-proj'></i></div>",
-		nextArrow: "<div class='next-proj'><i class='fas fa-arrow-alt-circle-right next-proj'></i></div>",
-		responsive: [{
-			breakpoint: 2355,
-			settings: {
-				slidesToShow: 3,
-				centerPadding: '250px',
-			}
-		},
-		{
-			breakpoint: 1920,
-			settings: {
-				slidesToShow: 3,
-				centerPadding: '100px',
-			}
-		},
-		{
-			breakpoint: 1664,
-			settings: {
-				slidesToShow: 3,
-				centerPadding: '60px',
-			}
-		},
-		{
-			breakpoint: 1283,
-			settings: {
-				slidesToShow: 1,
-				centerPadding: '350px',
-			}
-		},
-		{
-			breakpoint: 1178,
-			settings: {
-				slidesToShow: 1,
-				centerPadding: '250px',
-			}
-		}, 
-		{
-			breakpoint: 950,
-			settings: {
-				slidesToShow: 1,
-				centerPadding: '200px',
-			}
-		}, 
-		{
-			breakpoint: 888,
-			settings: {
-				centerPadding: '150px',
-				slidesToShow: 1,
-				// arrows: false,
-			}
-		},
-		{
-			breakpoint: 768,
-			settings: {
-				centerPadding: '120px',
-				slidesToShow: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 600,
-			settings: {
-				centerPadding: '80px',
-				slidesToShow: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 514,
-			settings: {
-				centerPadding: '50px',
-				slidesToShow: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 430,
-			settings: {
-				centerPadding: '30px',
-				slidesToShow: 1,
-				arrows: false,
-			}
-		},
-		{
-			breakpoint: 365,
-			settings: {
-				centerPadding: '15px',
-				slidesToShow: 1,
-				arrows: false,
-			}
-		},
-		{
+	// carousel.slick({
+	// 	centerPadding: '400px',
+	// 	centerMode: true,
+	// 	slidesToShow: 3,
+	// 	dots: true,
+	// 	rows: 0,
+	// 	prevArrow: "<div class='prev-proj'><i class='fas fa-arrow-alt-circle-left prev-proj'></i></div>",
+	// 	nextArrow: "<div class='next-proj'><i class='fas fa-arrow-alt-circle-right next-proj'></i></div>",
+	// 	responsive: [{
+	// 		breakpoint: 2355,
+	// 		settings: {
+	// 			slidesToShow: 3,
+	// 			centerPadding: '250px',
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 1920,
+	// 		settings: {
+	// 			slidesToShow: 3,
+	// 			centerPadding: '100px',
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 1664,
+	// 		settings: {
+	// 			slidesToShow: 3,
+	// 			centerPadding: '60px',
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 1283,
+	// 		settings: {
+	// 			slidesToShow: 1,
+	// 			centerPadding: '350px',
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 1178,
+	// 		settings: {
+	// 			slidesToShow: 1,
+	// 			centerPadding: '250px',
+	// 		}
+	// 	}, 
+	// 	{
+	// 		breakpoint: 950,
+	// 		settings: {
+	// 			slidesToShow: 1,
+	// 			centerPadding: '200px',
+	// 		}
+	// 	}, 
+	// 	{
+	// 		breakpoint: 888,
+	// 		settings: {
+	// 			centerPadding: '150px',
+	// 			slidesToShow: 1,
+	// 			// arrows: false,
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 768,
+	// 		settings: {
+	// 			centerPadding: '120px',
+	// 			slidesToShow: 1,
+	// 			arrows: false,
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 600,
+	// 		settings: {
+	// 			centerPadding: '80px',
+	// 			slidesToShow: 1,
+	// 			arrows: false,
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 514,
+	// 		settings: {
+	// 			centerPadding: '50px',
+	// 			slidesToShow: 1,
+	// 			arrows: false,
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 430,
+	// 		settings: {
+	// 			centerPadding: '30px',
+	// 			slidesToShow: 1,
+	// 			arrows: false,
+	// 		}
+	// 	},
+	// 	{
+	// 		breakpoint: 365,
+	// 		settings: {
+	// 			centerPadding: '15px',
+	// 			slidesToShow: 1,
+	// 			arrows: false,
+	// 		}
+	// 	},
+	// 	{
 
-		}]
-	})
+	// 	}]
+	// })
 
 	//initialize smoothscroll
 	var scroll = new SmoothScroll('a[href*="#"]');
