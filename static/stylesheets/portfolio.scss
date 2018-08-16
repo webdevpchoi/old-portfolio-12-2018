@@ -290,7 +290,6 @@ body {
 
 //project section
 .projects {
-	background-color: #F5F5F5;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: relative;
@@ -303,10 +302,13 @@ body {
 		text-transform: uppercase;
 	}
 
-	.row {
-		margin: 0;
-		
-		.proj {
+	.grid-wrapper {
+		display: grid;
+		row-gap: 1em;
+		column-gap: 1em;
+		grid-auto-columns: 275px;
+
+		.grid-item {
 			box-shadow: 0 0 8px rgba(0,0,0,.2);
 			background: rgb(255, 255, 255);
 			transition: transform .15s ease-out;
@@ -315,8 +317,33 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 1rem;
 			padding: 1rem;
+			position: relative;
+
+			.overview {
+				position: absolute;
+				z-index: 1;
+				height: 100%;
+				width: 100%;
+				background: rgba(0, 0, 0, .5);
+				opacity: 0;
+				transition: opacity .5s;
+				color: white;
+				letter-spacing: 3px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 10px;
+
+				h3 {
+					margin-bottom: .75rem;
+				}
+			}
+
+			.overview:hover{
+				opacity: 1;
+			}
 
 			.proj-icon {
 				height: 150px;
@@ -326,7 +353,7 @@ body {
 	}
 
 
-	.proj:hover {
+	.grid-item:hover {
 		box-shadow: 0 14px 32px 0 rgba(0,0,0,.2);
 		transform: translateY(-5px);
 		cursor: pointer;
@@ -393,8 +420,7 @@ body {
 
 //view all skills section
 .view-skills {
-	// background-color: $navbar-color;
-	margin: 0 auto;
+	margin: 15px auto;
 	width: 80%;
 	display: flex;
 	flex-direction: column;
@@ -619,7 +645,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
 	//intro
 	.intro {
 		.intro-header {
@@ -642,9 +667,10 @@ body {
 		align-items: center;
 		height: 100vh;
 		min-height: 1060px;
-
-		.proj-carousel {
-			width: 90%;
+		
+		.grid-wrapper {
+			grid-template-columns: repeat(2, 275px);
+			grid-template-rows: repeat(2, 1fr);
 		}
 	}
 	//about-me
@@ -699,5 +725,52 @@ body {
 			box-shadow: 5px 0 15px 1px #5688B0, 0 5px 10px 1px #5688B0;
 		}
 	}
-	
+}
+
+@media (min-width: 1024px) {
+	.projects {
+		.grid-wrapper {
+			grid-template-columns: repeat(4, 210px);
+			grid-template-rows: repeat(2, 1fr);
+			
+			.overview {
+				h3 {
+					font-size: 1.5rem
+				}
+				.overview-btn {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					button {
+						margin: 5px;
+					}
+				}
+			}
+		}		
+	}
+}
+
+@media (min-width: 1440px) {
+	.projects {
+
+		.grid-wrapper {
+			grid-template-columns: repeat(4, 250px);
+			grid-template-rows: repeat(2, 1fr);
+
+			.overview {
+				h3 {
+					font-size: 1.75rem;
+				}
+				.overview-btn {
+					display: block;
+
+					button {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
 }

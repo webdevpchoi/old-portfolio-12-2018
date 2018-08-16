@@ -251,7 +251,6 @@ body {
     border: 1px solid #D6DDE7; }
 
 .projects {
-  background-color: #F5F5F5;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
@@ -261,9 +260,12 @@ body {
     margin: .8em;
     letter-spacing: 3px;
     text-transform: uppercase; }
-  .projects .row {
-    margin: 0; }
-    .projects .row .proj {
+  .projects .grid-wrapper {
+    display: grid;
+    row-gap: 1em;
+    column-gap: 1em;
+    grid-auto-columns: 275px; }
+    .projects .grid-wrapper .grid-item {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
       background: white;
       transition: transform .15s ease-out;
@@ -272,12 +274,31 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 1rem;
-      padding: 1rem; }
-      .projects .row .proj .proj-icon {
+      padding: 1rem;
+      position: relative; }
+      .projects .grid-wrapper .grid-item .overview {
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity .5s;
+        color: white;
+        letter-spacing: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px; }
+        .projects .grid-wrapper .grid-item .overview h3 {
+          margin-bottom: .75rem; }
+      .projects .grid-wrapper .grid-item .overview:hover {
+        opacity: 1; }
+      .projects .grid-wrapper .grid-item .proj-icon {
         height: 150px;
         width: 150px; }
-  .projects .proj:hover {
+  .projects .grid-item:hover {
     box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
     cursor: pointer; }
@@ -319,7 +340,7 @@ body {
         box-shadow: 3px 0 15px 4px #ABABAB, 0 3px 15px 0; }
 
 .view-skills {
-  margin: 0 auto;
+  margin: 15px auto;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -492,8 +513,9 @@ body {
     align-items: center;
     height: 100vh;
     min-height: 1060px; }
-    .projects .proj-carousel {
-      width: 90%; }
+    .projects .grid-wrapper {
+      grid-template-columns: repeat(2, 275px);
+      grid-template-rows: repeat(2, 1fr); }
 
   .about-me {
     height: 100vh;
@@ -528,3 +550,26 @@ body {
       border-radius: 5px;
       max-width: 565px;
       box-shadow: 5px 0 15px 1px #5688B0, 0 5px 10px 1px #5688B0; } }
+@media (min-width: 1024px) {
+  .projects .grid-wrapper {
+    grid-template-columns: repeat(4, 210px);
+    grid-template-rows: repeat(2, 1fr); }
+    .projects .grid-wrapper .overview h3 {
+      font-size: 1.5rem; }
+    .projects .grid-wrapper .overview .overview-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .projects .grid-wrapper .overview .overview-btn button {
+        margin: 5px; } }
+@media (min-width: 1440px) {
+  .projects .grid-wrapper {
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 1fr); }
+    .projects .grid-wrapper .overview h3 {
+      font-size: 1.75rem; }
+    .projects .grid-wrapper .overview .overview-btn {
+      display: block; }
+      .projects .grid-wrapper .overview .overview-btn button {
+        margin: 0; } }
