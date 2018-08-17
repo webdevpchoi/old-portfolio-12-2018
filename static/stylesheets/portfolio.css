@@ -154,7 +154,7 @@ body {
     font-size: 1.7em;
     letter-spacing: 2px;
     margin: .5em 0;
-    color: #454545;
+    color: #000000;
     text-align: center; }
     .intro .intro-header .ideas {
       font-family: 'Permanent Marker', sans-serif;
@@ -175,17 +175,19 @@ body {
     border: 0;
     height: 1px;
     background: #333;
-    background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
+    background-image: linear-gradient(to right, black);
     z-index: 1;
     margin: 1em 0; }
   .intro .intro-p {
     font-weight: 100;
     text-align: center;
     margin-top: 2em; }
+    .intro .intro-p span {
+      color: #000000; }
     .intro .intro-p .keyword {
       background-color: rgba(105, 109, 125, 0.5);
       border-radius: 5px;
-      box-shadow: 0 4px 5px 2px #848897;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
       padding: 10px;
       position: relative;
       height: 100px;
@@ -205,7 +207,8 @@ body {
         position: absolute;
         opacity: 0;
         overflow: hidden;
-        animation: fadedown 11.5s linear infinite 0s; }
+        animation: fadedown 11.5s linear infinite 0s;
+        color: #F9FCFF; }
       .intro .intro-p .keyword span:nth-child(2) {
         animation-delay: 2.5s; }
       .intro .intro-p .keyword span:nth-child(3) {
