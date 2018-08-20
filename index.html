@@ -8,9 +8,6 @@
 	<link rel="stylesheet" href="./static/stylesheets/portfolio.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="./static/stylesheets/fontawesome/fontawesome-all.css">
-	<!-- Slick.js -->
-	<link rel="stylesheet" href="./static/dependencies/slick/slick.css">
-	<link rel="stylesheet" href="./static/dependencies/slick/slick-theme.css">
 </head>
 <body data-spy="scroll" data-target="#navbar">
 	<!-- INTRODUCTION -->
@@ -59,10 +56,9 @@
 	  </div>
 	</nav>
 	<!-- PROJECTS -->
-	<section class="projects container d-flex flex-column" id="projects">		
+	<section class="projects container d-flex flex-column align-items-center justify-content-center" id="projects">		
 		<h1 class="proj-title">Projects</h1>
-		<div class="d-flex justify-content-center align-items-center">
-			<div class="grid-wrapper">
+			<div class="grid-wrapper m-4">
 				<!-- PIXEL PERFECT -->
 				<div class="grid-item">
 					<img class="proj-icon" src="./static/icons/camera.svg" alt="Icon of camera">
@@ -112,18 +108,15 @@
 					<img class="img-fluid" src="./static/images/coming-soon.png" alt="Card image cap">	
 				</div>
 			</div>			
-		</div>
-		<div class="view-skills">
+		<div class="view-skills my-2">
 			<!-- SHOW SKILLS BUTTON -->
 			<button class="show-skills btn btn-warning my-2">
-				<i class="fas fa-code"></i>
-				View All Skills
+				<i class="fas fa-code"></i>View All Skills
 			</button>
 			<!-- DOWNLOAD RESUME -->
 			<button class="download-resume btn btn-warning my-2">
 				<a href="./static/documents/resume.pdf" download="Phillip Choi's Resume">
-					<i class="fas fa-file-alt"></i>
-						Download Resume					
+					<i class="fas fa-file-alt"></i>Download Resume					
 				</a>
 			</button>
 			<!-- SKILLS MODAL -->
@@ -171,29 +164,29 @@
 	<!-- ABOUT ME -->
 	<section id="about-me" class="about-me container-fluid d-flex align-items-center justify-content-center">
 		<div class="about-content p-3">
-			<h1 class="text-center">About Me</h1>
-			<div class="upper">
-				<div class="portrait-img">				
-					<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
-				</div>
-				<div>
+			<h1 class="text-center mt-4">About Me</h1>
+			<div class="about-desc d-flex justify-content-center align-items-center flex-column">
+				<!-- <img src="https://picsum.photos/300/300/?random" alt="self-portrait photo" class="img-fluid"> -->
+				<div class="p-3">
 					<p>Hi, I'm Phil! I'm a developer based in <strong>Tustin, California</strong>.</p>
 					<p>
 						Fueled both by ambition and caffeine, I'm consistently honing my skillset as a full-stack web developer. With a keen eye for detail and design, I strive to create beautiful, modern websites while prioritizing user experience through a simple user interface.
 					</p>
-				</div>
-			</div>
-			<div class="lower">
-				<div class="hobby-img">
-					<img src="https://picsum.photos/300/300/?random" alt="self-portrait photo">
-				</div>
-				<div class="p-2">
 					<p>
 						When I'm not staying up-to-date on the most recent web trends, you'll find me pestering my friends to model for me as an amateur photographer in the mornings, 
 						cramping up at the gym in the evenings, or endlessly editing videos into the night.
 					</p>
 				</div>
 			</div>
+			<!-- <div class="lower d-flex justify-content-center align-items-center flex-column">
+				<!-- <img src="https://picsum.photos/300/300/?random" alt="self-portrait photo" class="img-fluid"> -->
+				<!-- <div class="p-3">
+					<p>
+						When I'm not staying up-to-date on the most recent web trends, you'll find me pestering my friends to model for me as an amateur photographer in the mornings, 
+						cramping up at the gym in the evenings, or endlessly editing videos into the night.
+					</p>
+				</div>
+			</div> -->
 		</div>
 	</section>
 	<!-- CONTACT ME -->
@@ -254,7 +247,6 @@
 	</footer>			
 	
 	<script src="./static/dependencies/jquery-3.3.1.js"></script>
-	<script src="./static/dependencies/slick/slick.min.js"></script>
 	<script src="./static/scripts/portfolio.js"></script>
 	<script src="./static/lib/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 	<script src="./static/scripts/fontawesome-all.js"></script>
